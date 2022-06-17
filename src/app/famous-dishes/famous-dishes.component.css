@@ -1,5 +1,7 @@
 .container{
-    margin-bottom: 140px;
+  
+     margin-bottom: 140px;
+    
 }
 
 img{
@@ -62,9 +64,22 @@ img{
     transform: scale3d(1, 1, 1);
   }
 
-  #cart{
+  /* #cart{
       margin-bottom: 20px;
       width: 110px;
       text-align: center;
       margin-left: 75px;
+  } */
+
+  .btn btn-warning{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+      width: 110px;
+      text-align: center;
+      margin-left: 75px;
+  }
+
+  .card{
+    margin:5px;
+    margin-left: 50px;
   }

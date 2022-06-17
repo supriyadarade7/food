@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { IProduct } from '../iproduct';
+import { ApiService } from '../services/api.service';
+import { IProduct } from '../IProduct';
+import { CartService } from '../services/cart.service';
+
+
 
 @Component({
   selector: 'app-famous-dishes',
@@ -9,30 +12,30 @@ import { IProduct } from '../iproduct';
 })
 export class FamousDishesComponent implements OnInit {
 
-  result:IProduct[]=[];
-
-  constructor(private api:ApiService) { }
+  result: IProduct[] = [];
+  constructor(private api: ApiService, private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.api.getData().subscribe((data: IProduct[]) => {
+      console.log(data);
+      this.result = data;
+      // for cart use------------------------
 
-    this.api.getData().subscribe((data) =>{
-     console.log("in function", data);
+      this.result.forEach((a: any) => {
 
-     for(var i=0;i<data.length;i++){
-       let item:IProduct={
-         food_id:data[i].food_id,
-         food_name:data[i].food_name,
-         price:data[i].price,
-         rating:data[i].rating,
-         category:data[i].category,
-         cook_time:data[i].cook_time,
-         image_url:data[i].image_url
-       };
-       this.result.push(item);
-       console.log("final array",this.result);
-     }
+        Object.assign(a, { quantity: 1, total: a.Price })
+      });
     });
-    
   }
+    addtocart(dt: any){
+      this.cartService.addtocart(dt);
+    }
+  }
+   
+    
+    
+  
+// addtocart(dt:any){
+//    this.cartService.addtocart(dt);
+//  }
 
-}

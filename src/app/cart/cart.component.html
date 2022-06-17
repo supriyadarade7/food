@@ -1,0 +1,64 @@
+
+<ng-container >
+<div class="container">
+    <div class="card-table">
+        <div class="cart-dish">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th> sr.No</th>
+                        <th>Dish Name</th>
+                        <th>Dish Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dt of famous; let i =index">
+                        <td>{{i+1}}</td>
+                        <td>{{dt.name}}</td>
+                        <td><img style="width: 110px;" src="{{dt.image_url}}"></td>
+                        <td>{{dt.price}}</td>
+                        <button type="button" (click)="minus()"><i class="fa fa-minus"></i></button>
+                        <input type="text" [value]="quantity">
+                        <button type="button" (click)="plus()"><i class="fa fa-plus"></i></button>
+                        <td>{{dt.Quantity}}</td>
+
+                        <td>{{dt.Total}}</td>
+                        <td>
+                            <!-- <button (click)="removeItem(dt)" class="btn btn-danger"><span class='bi bi-trash' style='color: red'></span></button> -->
+                            <button style="width: 10px;" (click)="removeItem(dt); calculatePrice();" class="btn btn-danger delete-cart-item"><span class="fa fa-trash"></span></button>
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="emptycart()" class="btn.btn-danger">Empty cart</button></td>
+                        <td><button routerLink="/famous-dishes" class="btn.btn-primary">shop more</button></td>
+                        <td><button class="btn.btn-success">checkout</button></td>
+                        <td><strong>Grand Total:{{grandTotal}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</ng-container>
+
+<!-- <ng-container *ngif="false">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My cart</h5>
+        </div>
+        <div class="center">
+            <img src="../../assets/cartimageempty.png" alt="">
+            <h4>your cart is empty!</h4>
+            <h6> Add item to it now</h6>
+            <button routerLink="/famous-dish" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container> -->

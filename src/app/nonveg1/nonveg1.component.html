@@ -1,0 +1,122 @@
+<!-- <html>
+<body>
+  <p class="heading">NON-VEG MENU</p>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="../../assets/images/chicken.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Chicken</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="../../assets/Chicken 65.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Chicken 65</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="../../assets/Tandoori Lamb chops.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Tandoori Lamb chops</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="../../assets/chicken1.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Chicken special</p>
+         
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="../../assets/Egg fry masala.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Egg fry masala</p>
+           <p class="opacity-low">Cityscape</p>  -->
+        <!-- </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="../../assets/chicken biryani.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>chicken biryani</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="../../assets/Egg Tawa Masala.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Egg Tawa Masala.jpg</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="img-box">
+      <img src="../../assets/butter chicken.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>butter chicken</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="img-box">
+      <img src="../../assets/goan prawn curry with raw mango.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>goan prawn curry with raw mango</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="img-box">
+      <img src="../../assets/nihari gosht.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>nihari gosht</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html> 
+-->
+
+
+
+
+  <div class="container" mt-4 mb-4>
+    <h1 class="text-center">Nonveg<span class="">Dishes</span></h1>
+    <!--{{result.length}}-->
+    
+    <div class="row">
+      <ng-container  *ngFor="let dt of result ">
+        <div class="card col-md-3"> 
+          <img src="{{dt.image_url}}">
+    
+          <p ><strong>{{dt.name}}</strong></p>
+    
+          <p><b>₹{{dt.price}}</b></p>
+    
+          <button class="btn btn-warning"(click)=addtocart(dt) >Add to cart</button>
+             
+            </div>
+      </ng-container>
+    
+    </div>
+    </div>
+    
+    

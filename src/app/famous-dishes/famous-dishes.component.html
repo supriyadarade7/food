@@ -1,63 +1,29 @@
-<!-- <!DOCTYPE html>
-<html>
-<body>
+
+
+
 <div class="container" mt-4 mb-4>
 <h1 class="text-center">Famous<span class="">Dishes</span></h1>
-{{result.length}}
+<!--{{result.length}}-->
+
 <div class="row">
-  <div class="col-lg-3 mt-3" *ngFor="let dt of result">
+  <ng-container  *ngFor="let dt of result ">
     <div class="card col-md-3"> 
-         <img src="{{dt.image_url}}">
-         <h1>{{dt.food_name}}</h1>
-         <p>{{dt.price}}</p>
-          <button class="btn btn-warning">Add to cart</button>
+      <img src="{{dt.image_url}}">
+
+      <p><strong>{{dt.name}}</strong></p>
+
+      <p><b>₹{{dt.price}}</b></p>
+
+      
+          <button class="btn btn-warning"(click)=addtocart(dt) >Add to cart</button>
         </div>
-      </div>
+  </ng-container>
 
 </div>
 </div>
-</body>
-</html> -->
 
-<div class="container mt-2">
-    <div class="row">
-      <div class="col-md-3 col-sm-6 item">
-        <div class="card item-card card-block">
-        
-      <img src="../../assets/images/cpiece.png">
-      <h5 class="card-title  mt-3 mb-3"  style="text-align: center;">Chicken</h5>
-          <p class="card-text" style="text-align: center;">Rs.50</p> 
-          <button class="btn btn-warning" id="cart">Add To Cart</button>
-    </div>
-      </div>
-      <div class="col-md-3 col-sm-6 item">
-        <div class="card item-card card-block">
-        
-      <img src="../../assets/images/noodles.png">
-          <h5 class="card-title  mt-3 mb-3"  style="text-align: center;">Noodles</h5>
-          <p class="card-text"  style="text-align: center;">Rs.60</p> 
-          <button class="btn btn-warning" id="cart">Add To Cart</button>
-    </div>
-      </div>
-      <div class="col-md-3 col-sm-6 item">
-        <div class="card item-card card-block">
-        
-      <img src="../../assets/images/brownie.png">
-          <h5 class="card-title  mt-3 mb-3"  style="text-align: center;">Brownie</h5>
-          <p class="card-text"  style="text-align: center;">Rs.90</p> 
-          <button class="btn btn-warning" id="cart">Add To Cart</button>
-    </div>
-      </div>
-      <div class="col-md-3 col-sm-6 item">
-        <div class="card item-card card-block">
-        
-      <img src="../../assets/images/momos.png">
-          <h5 class="card-title  mt-3 mb-3"  style="text-align: center;">Momos</h5>
-          <p class="card-text"  style="text-align: center;">Rs.40</p> 
-          <button class="btn btn-warning" id="cart">Add To Cart</button>
-    </div>
-      </div>    
-    </div>
-    
-  </div>
-  
+
+
+               
+
+
