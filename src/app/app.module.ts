@@ -18,6 +18,9 @@ import { Nonveg1Component } from './nonveg1/nonveg1.component';
 import { CartComponent } from './cart/cart.component';
 import { NgifTestComponent } from './ngif-test/ngif-test.component';
 import { CommonModule } from '@angular/common';
+import { FamousdishListComponent } from './famousdish-list/famousdish-list.component';
+import { LoginComponent } from './login/login.component';
+import { AdminloginComponent } from './contact/adminlogin/adminlogin.component';
 
 
 
@@ -37,7 +40,10 @@ import { CommonModule } from '@angular/common';
     VegComponent,
     Nonveg1Component,
     CartComponent,
-    NgifTestComponent
+    NgifTestComponent,
+    FamousdishListComponent,
+    LoginComponent,
+    AdminloginComponent
     
   ],
   imports: [
